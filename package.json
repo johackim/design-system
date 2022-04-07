@@ -1,0 +1,60 @@
+{
+  "name": "@johackim/design-system",
+  "version": "1.0.0",
+  "description": "My personal design system",
+  "main": "src/index.js",
+  "author": "johackim",
+  "dependencies": {
+    "next": "^12.1.4"
+  },
+  "keywords": [
+    "design-system",
+    "react",
+    "storybook"
+  ],
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/johackim/design-system/issues"
+  },
+  "homepage": "https://github.com/johackim/design-system",
+  "devDependencies": {
+    "@babel/core": "^7.17.9",
+    "@commitlint/cli": "^16.2.3",
+    "@commitlint/config-conventional": "^16.2.1",
+    "@storybook/addon-actions": "^6.4.20",
+    "@storybook/addon-essentials": "^6.4.20",
+    "@storybook/addon-interactions": "^6.4.20",
+    "@storybook/addon-links": "^6.4.20",
+    "@storybook/addon-postcss": "^2.0.0",
+    "@storybook/react": "^6.4.20",
+    "@storybook/testing-library": "^0.0.9",
+    "autoprefixer": "^10.4.4",
+    "babel-loader": "^8.2.4",
+    "eslint": "^8.12.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-import-resolver-jsconfig": "^1.1.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-react": "^7.29.4",
+    "eslint-plugin-react-hooks": "^4.4.0",
+    "husky": "4",
+    "postcss": "^8.4.12",
+    "prettier": "^2.6.2",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "tailwindcss": "^3.0.23"
+  },
+  "scripts": {
+    "storybook": "start-storybook -p 6006"
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  }
+}
