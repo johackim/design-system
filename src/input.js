@@ -1,3 +1,5 @@
+import React from 'react';
+
 const Input = ({ type, name, value, onChange, className, placeholder, required }) => (
     <input
         type={type}

@@ -1,3 +1,4 @@
+import React from 'react';
 import NextLink from 'next/link';
 
 const Link = ({ href, children, title, className, active }) => (

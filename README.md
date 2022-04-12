@@ -7,19 +7,15 @@ My personal design system
 ## Installation
 
 ```bash
-# Clone this repository
-git clone https://github.com/johackim/design-system
+yarn add -D @johackim/design-system
+```
 
-# Go into the repository
-cd design-system
+## Usage
 
-# Install dependencies
-yarn install
+```js
+import { Hero } from '@johackim/design-system';
 
-# Run storybook
-npm run storybook
-
-# Go to http://localhost:6006
+export default () => <Hero />;
 ```
 
 ## License
