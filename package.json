@@ -48,16 +48,18 @@
     "husky": "4",
     "postcss": "^8.4.12",
     "prettier": "^2.6.2",
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
     "rollup": "^2.70.1",
     "rollup-plugin-postcss": "^4.0.2",
+    "storybook-css-modules-preset": "^1.1.1",
     "storybook-tailwind-dark-mode": "^1.0.11",
     "tailwindcss": "^3.0.23"
   },
   "scripts": {
     "prepublishOnly": "npm run build",
     "build": "rollup -c",
+    "watch": "rollup -c -w",
     "storybook": "start-storybook -p 6006"
   },
   "commitlint": {

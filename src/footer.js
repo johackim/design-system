@@ -19,7 +19,7 @@ const Footer = ({ links, date }) => (
 );
 
 Footer.defaultProps = {
-    links: [{ name: 'Link 1', path: '/' }, { name: 'Link 2', path: '/' }],
+    links: [],
 };
 
 export default Footer;

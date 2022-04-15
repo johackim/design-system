@@ -1,0 +1,7 @@
+:global(#__next), :global(#storybook) {
+    @apply h-screen flex flex-col justify-between;
+}
+
+:global(#__next) main, :global(#storybook) main {
+    @apply flex-1;
+}

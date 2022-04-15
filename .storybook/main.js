@@ -4,6 +4,7 @@ module.exports = {
     stories: ['../**/*.stories.mdx', '../**/*.stories.@(js|jsx|ts|tsx)'],
     addons: [
         'storybook-tailwind-dark-mode',
+        'storybook-css-modules-preset',
         "@storybook/addon-links",
         "@storybook/addon-essentials",
         "@storybook/addon-interactions",
@@ -21,6 +22,7 @@ module.exports = {
         config.resolve.alias = {
             ...config.resolve.alias,
             '@components': path.resolve(__dirname, "../src"),
+            '@styles': path.resolve(__dirname, "../styles"),
         };
         return config;
     },

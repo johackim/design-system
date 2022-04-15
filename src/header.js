@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 
-const Header = ({ title, description, logo, fixed, size, children }) => {
+const Header = ({ title, description, logo, fixed, size, children, className }) => {
     const [isOpen, setOpen] = useState(false);
     const ref = useRef();
 
@@ -24,8 +24,8 @@ const Header = ({ title, description, logo, fixed, size, children }) => {
     }, []);
 
     return (
-        <header ref={ref}>
-            <div className={`flex shadow-md inset-x-0 h-16 items-center z-20 text-gray-700 dark:bg-gray-900 dark:text-gray-300 bg-white ${fixed ? 'fixed top-0' : ''}`}>
+        <>
+            <header ref={ref} className={`flex shadow-md inset-x-0 h-16 items-center z-20 text-gray-700 dark:bg-gray-900 dark:text-gray-300 bg-white ${fixed ? 'fixed top-0' : ''} ${className}`}>
                 <div className={`container m-auto flex items-center justify-between flex-wrap px-4 ${sizes[size]}`}>
                     <Link href="/">
                         <a href="/">
@@ -55,7 +55,7 @@ const Header = ({ title, description, logo, fixed, size, children }) => {
                         </button>
                     </div>
                 </div>
-            </div>
+            </header>
             {isOpen && (
                 <div className={`sm:hidden z-20 mb-4 border-b dark:border-gray-800 fixed inset-x-0 ${fixed ? 'top-16' : ''}`}>
                     <div className="pt-2 pb-3 space-y-1 bg-white dark:bg-gray-900">
@@ -69,7 +69,7 @@ const Header = ({ title, description, logo, fixed, size, children }) => {
                     </div>
                 </div>
             )}
-        </header>
+        </>
     );
 };
 
@@ -79,6 +79,7 @@ Header.defaultProps = {
     size: 'lg',
     description: 'Description',
     logo: 'https://svgur.com/i/csw.svg',
+    className: '',
 };
 
 export default Header;
