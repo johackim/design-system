@@ -9,4 +9,5 @@ export { default as Input } from './input';
 export { default as Empty } from './empty';
 export { default as Loading } from './loading';
 export { default as Layout } from './layout';
+export { default as Select } from './select';
 export { default as Appointment } from './appointment';

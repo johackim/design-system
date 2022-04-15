@@ -1,0 +1,135 @@
+.article {
+    @apply relative text-gray-700;
+}
+
+.article h1,
+.article h2,
+.article h3,
+.article h4,
+.article h5,
+.article h6 {
+    @apply my-4;
+    scroll-margin-top: 70px;
+}
+
+.article h1 {
+    @apply text-4xl font-bold;
+}
+
+.article h2 {
+    @apply text-3xl font-bold;
+}
+
+.article h3 {
+    @apply text-2xl font-bold;
+}
+
+.article h4 {
+    @apply text-xl font-bold;
+}
+
+.article h5 {
+    @apply text-lg font-bold;
+}
+
+.article > p:first-child {
+    @apply text-lg mt-4;
+}
+
+.article p {
+    @apply my-8 leading-relaxed;
+}
+
+.article ol,
+.article ul {
+    @apply list-inside ml-6 my-8;
+}
+
+.article ul:not([class^="contains-task-list"]) {
+    @apply list-disc;
+}
+
+.article ol {
+    @apply list-decimal pl-0;
+}
+
+.article li {
+    @apply my-4;
+}
+
+.article li > p {
+    @apply my-0 inline;
+}
+
+.article a {
+    @apply underline break-all;
+}
+
+.article pre {
+    @apply bg-gray-200 px-4 py-2 my-4 text-xs break-words rounded-md whitespace-pre-wrap;
+}
+
+.article pre code {
+    @apply p-0;
+}
+
+.article code {
+    @apply bg-gray-200 whitespace-pre-wrap text-xs rounded-md;
+    padding: 2px 6px;
+}
+
+.article figure {
+    @apply inline-block;
+}
+
+.article figure img {
+    @apply align-top;
+}
+
+.article figure figcaption {
+    @apply text-center italic mt-2;
+}
+
+.article table {
+    @apply table-fixed;
+    max-width: 100%;
+    width: 100%;
+}
+
+.article table tr th {
+    @apply px-4 py-2;
+}
+
+.article table tr td {
+    @apply border border-gray-800 px-4 py-2;
+}
+
+.article blockquote {
+    @apply border-l-4 border-gray-700 pl-4 my-6 text-lg mx-0;
+}
+
+.article em {
+    @apply italic;
+}
+
+.article ol.contains-task-list,
+.article ul.contains-task-list {
+    @apply list-none list-inside;
+}
+
+.article mark {
+    @apply bg-gray-300;
+}
+
+:global(.dark) .article {
+    @apply text-gray-300;
+}
+
+:global(.dark) .article hr {
+    @apply border-gray-800;
+}
+
+:global(.dark) .article pre,
+:global(.dark) .article code {
+    @apply bg-gray-800;
+}
