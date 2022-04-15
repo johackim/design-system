@@ -18,7 +18,7 @@ export default {
                     'module-resolver',
                     {
                         alias: {
-                            '@components': './src',
+                            '@components': './src/components',
                             '@styles': './styles',
                         },
                     },
