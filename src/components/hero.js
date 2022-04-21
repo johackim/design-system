@@ -9,7 +9,7 @@ const Hero = ({ children, preHead, headline, subHeadline, centered, backgroundIm
 
             { headline && <h1 className={`mx-auto text-3xl max-w-2xl tracking-tight leading-10 font-medium sm:text-5xl sm:leading-none md:text-6xl ${backgroundImage ? 'text-gray-300' : 'text-gray-700 dark:text-gray-300'}`}>{headline}</h1> }
 
-            { subHeadline && <h2 className={`max-w-md mx-auto text-base sm:text-lg md:text-xl md:max-w-3xl mt-5 ${backgroundImage ? 'text-gray-300' : 'text-gray-500 dark:text-gray-400'}`}>{subHeadline}</h2> }
+            { subHeadline && <h2 className={`max-w-md mx-auto text-base sm:text-lg md:text-xl md:max-w-3xl mt-2 ${backgroundImage ? 'text-gray-300' : 'text-gray-500 dark:text-gray-400'}`}>{subHeadline}</h2> }
 
             <div className="mt-4 grid gap-2 sm:grid-flow-col sm:auto-cols-max sm:justify-center">
                 {children}
