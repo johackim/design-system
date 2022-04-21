@@ -15,4 +15,5 @@ export { default as Panel } from '@components/panel';
 export { default as Article } from '@components/article';
 export { default as Gallery } from '@components/gallery';
 export { default as Dropdown } from '@components/dropdown';
+export { default as Progress } from '@components/progress';
 export { default as Appointment } from '@components/appointment';
