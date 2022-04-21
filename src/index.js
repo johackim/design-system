@@ -11,5 +11,6 @@ export { default as Loading } from '@components/loading';
 export { default as Layout } from '@components/layout';
 export { default as Select } from '@components/select';
 export { default as Switch } from '@components/switch';
+export { default as Panel } from '@components/panel';
 export { default as Dropdown } from '@components/dropdown';
 export { default as Appointment } from '@components/appointment';
