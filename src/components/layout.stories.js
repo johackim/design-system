@@ -15,3 +15,13 @@ Default.args = {
 };
 
 Default.decorators = [(Story) => <div id="storybook">{Story()}</div>];
+
+export const WithContentCentered = Template.bind({});
+
+WithContentCentered.args = {
+    ...Layout.defaultProps,
+    className: 'flex flex-col justify-center',
+    children: <section className="pt-20 px-4 container mx-auto lg:max-w-screen-lg text-center">Centered Message</section>,
+};
+
+WithContentCentered.decorators = [(Story) => <div id="storybook">{Story()}</div>];
