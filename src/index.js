@@ -13,5 +13,6 @@ export { default as Select } from '@components/select';
 export { default as Switch } from '@components/switch';
 export { default as Panel } from '@components/panel';
 export { default as Article } from '@components/article';
+export { default as Gallery } from '@components/gallery';
 export { default as Dropdown } from '@components/dropdown';
 export { default as Appointment } from '@components/appointment';
