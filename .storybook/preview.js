@@ -21,4 +21,8 @@ export const parameters = {
             },
         ],
     },
+    darkMode: {
+        darkClass: 'tw-dark',
+        stylePreview: true,
+    },
 };

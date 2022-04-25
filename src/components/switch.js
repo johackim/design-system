@@ -13,18 +13,18 @@ const Switch = ({ defaultValue, icons, onClick }) => {
     }, []);
 
     return (
-        <button type="button" onClick={toggle} className={`${isOpen ? 'bg-gray-600' : 'bg-gray-200'} relative inline-flex flex-shrink-0 h-6 w-11 border-2 border-transparent rounded-full cursor-pointer transition-colors ease-in-out duration-200 focus:outline-none`}>
+        <button type="button" onClick={toggle} className={`${isOpen ? 'tw-bg-gray-600' : 'tw-bg-gray-200'} tw-relative tw-inline-flex tw-flex-shrink-0 tw-h-6 tw-w-11 tw-border-2 tw-border-transparent tw-rounded-full tw-cursor-pointer tw-transition-colors tw-ease-in-out tw-duration-200 focus:tw-outline-none`}>
             {icons.length === 2 ? (
-                <span className={`${isOpen ? 'translate-x-5' : 'translate-x-0'} pointer-events-none relative inline-block h-5 w-5 rounded-full bg-white shadow transform ring-0 transition ease-in-out duration-200`}>
-                    <span className={`${isOpen ? 'opacity-0 ease-out duration-100' : 'opacity-100 ease-in duration-200'} absolute inset-0 h-full w-full flex items-center justify-center transition-opacity`}>
+                <span className={`${isOpen ? 'tw-translate-x-5' : 'tw-translate-x-0'} tw-pointer-events-none tw-relative tw-inline-block tw-h-5 tw-w-5 tw-rounded-full tw-bg-white tw-shadow tw-transform tw-ring-0 tw-transition tw-ease-in-out tw-duration-200`}>
+                    <span className={`${isOpen ? 'tw-opacity-0 tw-ease-out tw-duration-100' : 'tw-opacity-100 tw-ease-in tw-duration-200'} tw-absolute tw-inset-0 tw-h-full tw-w-full tw-flex tw-items-center tw-justify-center tw-transition-opacity`}>
                         {icons[0]}
                     </span>
-                    <span className={`${isOpen ? 'opacity-100 ease-in duration-200' : 'opacity-0 ease-out duration-100'} absolute inset-0 h-full w-full flex items-center justify-center transition-opacity`}>
+                    <span className={`${isOpen ? 'tw-opacity-100 tw-ease-in tw-duration-200' : 'tw-opacity-0 tw-ease-out tw-duration-100'} tw-absolute tw-inset-0 tw-h-full tw-w-full tw-flex tw-items-center tw-justify-center tw-transition-opacity`}>
                         {icons[1]}
                     </span>
                 </span>
             ) : (
-                <span className={`${isOpen ? 'translate-x-5' : 'translate-x-0'} pointer-events-none inline-block h-5 w-5 rounded-full bg-white shadow transform ring-0 transition ease-in-out duration-200`} />
+                <span className={`${isOpen ? 'tw-translate-x-5' : 'tw-translate-x-0'} tw-pointer-events-none tw-inline-block tw-h-5 tw-w-5 tw-rounded-full tw-bg-white tw-shadow tw-transform tw-ring-0 tw-transition tw-ease-in-out tw-duration-200`} />
             )}
         </button>
     );

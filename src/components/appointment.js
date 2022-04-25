@@ -3,23 +3,23 @@ import React from 'react';
 import Button from '@components/button';
 
 const Appointment = ({ name, date, location, href }) => (
-    <div className="py-6 grid md:grid-cols-none md:grid-flow-col justify-between">
-        <div className="flex gap-2">
-            <div className="bg-gray-200 dark:bg-gray-700 dark:text-gray-300 px-4 py-2 rounded text-center w-[58px]">
-                <div className="text-xs capitalize">{(new Date(date).toLocaleString('default', { month: 'short' }))}</div>
-                <div className="text-xl">{(new Date(date).getDate())}</div>
+    <div className="tw-py-6 tw-grid md:tw-grid-cols-none md:tw-grid-flow-col tw-justify-between">
+        <div className="tw-flex tw-gap-2">
+            <div className="tw-bg-gray-200 dark:tw-bg-gray-700 dark:tw-text-gray-300 tw-px-4 tw-py-2 tw-rounded tw-text-center tw-w-[58px]">
+                <div className="tw-text-xs tw-capitalize">{(new Date(date).toLocaleString('default', { month: 'short' }))}</div>
+                <div className="tw-text-xl">{(new Date(date).getDate())}</div>
             </div>
-            <div className="ml-2">
-                <h3 className="pr-10 font-semibold dark:text-gray-300">{name}</h3>
-                <div className="text-gray-500 grid md:grid-flow-col justify-start dark:text-gray-300">
+            <div className="tw-ml-2">
+                <h3 className="tw-pr-10 tw-font-semibold dark:tw-text-gray-300">{name}</h3>
+                <div className="tw-text-gray-500 tw-grid md:tw-grid-flow-col tw-justify-start dark:tw-text-gray-300">
                     {location}
                 </div>
             </div>
         </div>
 
         {href && (
-            <div className="flex items-center">
-                <Button href={href} target="_blank" className="md:ml-4 !py-1 !px-2" secondary>Réserver</Button>
+            <div className="tw-flex tw-items-center">
+                <Button href={href} target="_blank" className="md:tw-ml-4 !tw-py-1 !tw-px-2" secondary>Réserver</Button>
             </div>
         )}
     </div>

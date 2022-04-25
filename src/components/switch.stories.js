@@ -17,7 +17,7 @@ export const WithIcons = Template.bind({});
 WithIcons.args = {
     ...Switch.defaultProps,
     icons: [
-        <SunIcon className="bg-white h-3 w-3 text-gray-900" />,
-        <MoonIcon className="bg-white h-3 w-3 text-gray-900" />,
+        <SunIcon className="tw-bg-white tw-h-3 tw-w-3 tw-text-gray-900" />,
+        <MoonIcon className="tw-bg-white tw-h-3 tw-w-3 tw-text-gray-900" />,
     ],
 };

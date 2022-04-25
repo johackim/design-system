@@ -1,11 +1,11 @@
 import React from 'react';
 
 const Gallery = ({ className, images }) => (
-    <div className={`mx-auto ${className}`}>
-        <div className="grid grid-cols-3 gap-4">
+    <div className={`tw-mx-auto ${className}`}>
+        <div className="tw-grid tw-grid-cols-3 tw-gap-4">
             {images.map((image) => (
                 <a href={image} key={image} target="_blank" rel="noreferrer">
-                    <img className="block object-cover object-center w-full h-full rounded-md" src={image} alt="gallery" />
+                    <img className="tw-block tw-object-cover tw-object-center tw-w-full tw-h-full tw-rounded-md" src={image} alt="gallery" />
                 </a>
             ))}
         </div>

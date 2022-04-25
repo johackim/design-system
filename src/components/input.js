@@ -2,14 +2,14 @@ import React from 'react';
 
 const Input = ({ type, label, name, value, onChange, className, placeholder, required, disabled }) => (
     <div className={className}>
-        {label && <label htmlFor={name} className="capitalize block text-sm font-medium leading-5 text-gray-700 dark:text-gray-300">{label}</label>}
+        {label && <label htmlFor={name} className="tw-capitalize tw-block tw-text-sm tw-font-medium tw-leading-5 tw-text-gray-700 dark:tw-text-gray-300">{label}</label>}
         <input
             id={name}
             type={type}
             name={name}
             value={value}
             onChange={onChange}
-            className={`mt-1 py-2 px-3 border border-gray-300 rounded-md focus:border-gray-300 focus:outline-none focus:shadow-outline-none focus:ring-0 sm:text-sm sm:leading-5 text-gray-700 dark:bg-transparent dark:border-gray-500 dark:text-gray-300 dark:focus:border-gray-300 ${disabled ? 'bg-gray-200 dark:!bg-gray-700 cursor-not-allowed' : ''} ${className.includes('w-full') ? 'w-full' : ''}`}
+            className={`tw-mt-1 tw-py-2 tw-px-3 tw-border tw-border-gray-300 tw-rounded-md focus:tw-border-gray-300 focus:tw-outline-none focus:tw-shadow-outline-none focus:tw-ring-0 sm:tw-text-sm sm:tw-leading-5 tw-text-gray-700 dark:tw-bg-transparent dark:tw-border-gray-500 dark:tw-text-gray-300 dark:focus:tw-border-gray-300 ${disabled ? 'tw-bg-gray-200 dark:!tw-bg-gray-700 tw-cursor-not-allowed' : ''} ${className.includes('tw-w-full') ? 'tw-w-full' : ''}`}
             placeholder={placeholder}
             required={required}
             disabled={disabled}

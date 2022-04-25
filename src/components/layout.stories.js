@@ -12,13 +12,13 @@ export const Default = Template.bind({});
 
 Default.args = {
     ...Layout.defaultProps,
-    children: <section className="pt-20 px-4 container mx-auto lg:max-w-screen-lg text-gray-700 dark:text-gray-300">Hello world</section>,
+    children: <section className="tw-pt-20 tw-px-4 tw-container tw-mx-auto lg:tw-max-w-screen-lg tw-text-gray-700 dark:tw-text-gray-300">Hello world</section>,
 };
 
 export const WithContentCentered = Template.bind({});
 
 WithContentCentered.args = {
     ...Layout.defaultProps,
-    className: 'flex flex-col justify-center',
-    children: <section className="pt-20 px-4 container mx-auto lg:max-w-screen-lg text-center text-gray-700 dark:text-gray-300">Centered Message</section>,
+    className: 'tw-flex tw-flex-col tw-justify-center',
+    children: <section className="tw-pt-20 tw-px-4 tw-container tw-mx-auto lg:tw-max-w-screen-lg tw-text-center tw-text-gray-700 dark:tw-text-gray-300">Centered Message</section>,
 };

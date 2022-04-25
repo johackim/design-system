@@ -2,10 +2,10 @@ import React from 'react';
 
 const Select = ({ name, label, options, className }) => (
     <div className={className}>
-        {label && <label htmlFor={name} className="capitalize block text-sm font-medium text-gray-700 dark:text-gray-300">{label}</label>}
-        <select id={name} name={name} className={`mt-1 block pl-3 pr-10 py-2 text-base border-gray-300 focus:border-gray-300 sm:text-sm rounded-md appearance-none focus:outline-none focus:shadow-outline-none focus:ring-0 text-gray-700 dark:bg-transparent dark:text-gray-300 dark:border-gray-500 ${className.includes('w-full') ? 'w-full' : ''}`}>
+        {label && <label htmlFor={name} className="tw-capitalize tw-block tw-text-sm tw-font-medium tw-text-gray-700 dark:tw-text-gray-300">{label}</label>}
+        <select id={name} name={name} className={`tw-mt-1 tw-block tw-pl-3 tw-pr-10 tw-py-2 tw-text-base tw-border-gray-300 focus:tw-border-gray-300 sm:tw-text-sm tw-rounded-md tw-appearance-none focus:tw-outline-none focus:tw-shadow-outline-none focus:tw-ring-0 tw-text-gray-700 dark:tw-bg-transparent dark:tw-text-gray-300 dark:tw-border-gray-500 ${className.includes('tw-w-full') ? 'tw-w-full' : ''}`}>
             {options.map((option) => (
-                <option key={option} className="dark:text-gray-900">{option}</option>
+                <option key={option} className="dark:tw-text-gray-900">{option}</option>
             ))}
         </select>
     </div>

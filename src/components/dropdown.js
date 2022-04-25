@@ -18,14 +18,14 @@ const Dropdown = ({ children, label, className, simple, isOpenDefault }) => {
     }, []);
 
     return (
-        <div ref={ref} className="relative inline-block text-left text-gray-700 dark:text-gray-300">
-            <Button onClick={() => setOpen(!isOpen)} className={simple ? `${className} border-none !px-0 !py-0` : className} secondary>
+        <div ref={ref} className="tw-relative tw-inline-block tw-text-left tw-text-gray-700 dark:tw-text-gray-300">
+            <Button onClick={() => setOpen(!isOpen)} className={simple ? `${className} tw-border-none !tw-px-0 !tw-py-0` : className} secondary>
                 {label}
-                <ChevronDownIcon className="-mr-1 ml-2 h-4 w-4" />
+                <ChevronDownIcon className="-tw-mr-1 tw-ml-2 tw-h-4 tw-w-4" />
             </Button>
 
             {children && (
-                <div className={`${!isOpen && 'hidden'} origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black dark:ring-gray-700 ring-opacity-5 divide-y divide-gray-100 dark:divide-gray-800 focus:outline-none dark:bg-gray-900`}>
+                <div className={`${!isOpen && 'tw-hidden'} tw-origin-top-right tw-absolute tw-right-0 tw-mt-2 tw-w-56 tw-rounded-md tw-shadow-lg tw-bg-white tw-ring-1 tw-ring-black dark:tw-ring-gray-700 tw-ring-opacity-5 tw-divide-y tw-divide-gray-100 dark:tw-divide-gray-800 focus:tw-outline-none dark:tw-bg-gray-900`}>
                     {children}
                 </div>
             )}
