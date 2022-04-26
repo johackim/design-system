@@ -1,31 +1,14 @@
 import babel from '@rollup/plugin-babel';
-import commonjs from '@rollup/plugin-commonjs';
 import postcss from 'rollup-plugin-postcss';
 
 export default {
     input: 'src/index.js',
     output: [
-        { format: 'es', file: 'dist/esm/index.js' },
-        { format: 'cjs', file: 'dist/cjs/index.js', exports: 'named' },
+        { format: 'esm', file: 'dist/esm/index.js' },
     ],
-    external: ['react', 'react-dom', 'next/link'],
+    external: ['react', 'react-dom', 'next/link', 'twind', 'twind/shim', '@heroicons/react/solid'],
     plugins: [
-        babel({
-            babelHelpers: 'bundled',
-            presets: ['@babel/preset-react'],
-            plugins: [
-                [
-                    'module-resolver',
-                    {
-                        alias: {
-                            '@components': './src/components',
-                            '@styles': './styles',
-                        },
-                    },
-                ],
-            ],
-        }),
-        commonjs(),
+        babel({ babelHelpers: 'bundled' }),
         postcss(),
     ],
 };

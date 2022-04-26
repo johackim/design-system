@@ -1,4 +1,20 @@
-import '@styles/globals.css';
+import '@styles/roboto.css';
+import 'twind/shim';
+import { withForms } from '@twind/forms'
+import { setup } from 'twind';
+
+setup({
+    hash: true,
+    darkMode: 'class',
+    theme: {
+        extend: {
+            fontFamily: {
+                sans: 'Roboto, sans-serif',
+            },
+        },
+    },
+    preflight: withForms(),
+});
 
 export const parameters = {
     actions: { argTypesRegex: "^on[A-Z].*" },

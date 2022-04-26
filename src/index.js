@@ -1,4 +1,18 @@
-import '@styles/globals.css';
+import '@styles/roboto.css';
+import 'twind/shim';
+import { setup } from 'twind';
+
+setup({
+    hash: true,
+    darkMode: 'class',
+    theme: {
+        extend: {
+            fontFamily: {
+                sans: 'Roboto, sans-serif',
+            },
+        },
+    },
+});
 
 export { default as Button } from '@components/button';
 export { default as Link } from '@components/link';

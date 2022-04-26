@@ -1,7 +1,7 @@
 const path = require('path');
 
 module.exports = {
-    stories: ['../**/*.stories.mdx', '../**/*.stories.@(js|jsx|ts|tsx)'],
+    stories: ['../**/*.stories.js'],
     addons: [
         'storybook-tailwind-dark-mode',
         'storybook-css-modules-preset',
