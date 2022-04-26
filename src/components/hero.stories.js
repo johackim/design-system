@@ -18,7 +18,7 @@ withBackgroundImage.args = {
     ...Hero.defaultProps,
     backgroundImage: true,
     children: [
-        <Button href="/" className="tw-bg-gray-700 hover:tw-bg-gray-600 tw-inline-flex tw-rounded-md tw-items-center tw-justify-center tw-px-5 tw-py-2 border tw-border-transparent tw-text-white focus:tw-outline-none">Call To Action</Button>,
-        <Button href="/more" className="tw-text-gray-300 hover:tw-text-white hover:tw-border-white tw-inline-flex tw-rounded-md tw-items-center tw-justify-center tw-px-5 tw-py-2 tw-border focus:tw-outline-none" secondary>Secondary Action</Button>,
+        <Button href="/" className="bg-gray-700 hover:bg-gray-600 inline-flex rounded-md items-center justify-center px-5 py-2 border border-transparent text-white focus:outline-none">Call To Action</Button>,
+        <Button href="/more" className="text-gray-300 hover:text-white hover:border-white inline-flex rounded-md items-center justify-center px-5 py-2 border focus:outline-none" secondary>Secondary Action</Button>,
     ],
 };

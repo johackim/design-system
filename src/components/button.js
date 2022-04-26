@@ -2,9 +2,9 @@ import React from 'react';
 import Link from 'next/link';
 
 const Button = ({ href, secondary, children, onClick, className = '', ...props }) => {
-    const primaryClassName = `tw-inline-flex tw-rounded-md tw-items-center tw-justify-center tw-px-5 tw-py-2 tw-border tw-border-transparent tw-text-white tw-bg-gray-600 hover:tw-bg-gray-700 dark:tw-bg-gray-700 dark:hover:tw-bg-gray-600 dark:hover:tw-text-white dark:tw-text-gray-300 focus:tw-outline-none ${className}`;
+    const primaryClassName = `inline-flex rounded-md items-center justify-center px-5 py-2 border border-transparent text-white bg-gray-600 hover:bg-gray-700 dark:bg-gray-700 dark:hover:bg-gray-600 dark:hover:text-white dark:text-gray-300 focus:outline-none ${className}`;
 
-    const secondaryClassName = `tw-inline-flex tw-rounded-md tw-items-center tw-justify-center tw-px-5 tw-py-2 tw-border hover:tw-border-gray-400 tw-text-gray-700 hover:tw-text-gray-900 dark:tw-text-gray-300 dark:hover:tw-text-white dark:hover:tw-border-white focus:tw-outline-none ${className}`;
+    const secondaryClassName = `inline-flex rounded-md items-center justify-center px-5 py-2 border hover:border-gray-400 text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white dark:hover:border-white focus:outline-none ${className}`;
 
     return (
         href ? (

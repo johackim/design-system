@@ -1,12 +1,12 @@
 import React from 'react';
 
 const Empty = ({ title, subtitle, icon, button }) => (
-    <div className="tw-text-center">
+    <div className="text-center">
         {icon}
-        <h3 className="tw-mt-2 tw-text-md tw-font-medium tw-text-gray-900 dark:tw-text-gray-300">{title}</h3>
-        <p className="tw-mt-1 tw-text-sm tw-text-gray-500 dark:tw-text-gray-400">{subtitle}</p>
+        <h3 className="mt-2 text-md font-medium text-gray-900 dark:text-gray-300">{title}</h3>
+        <p className="mt-1 text-sm text-gray-500 dark:text-gray-400">{subtitle}</p>
         {button && (
-            <div className="tw-mt-4">
+            <div className="mt-4">
                 {button}
             </div>
         )}
@@ -18,7 +18,7 @@ Empty.defaultProps = {
     subtitle: 'Get started by creating a new project.',
     icon: (
         <svg
-            className="tw-mx-auto tw-h-12 tw-w-12 tw-text-gray-400"
+            className="mx-auto h-12 w-12 text-gray-400"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -36,9 +36,9 @@ Empty.defaultProps = {
     button: (
         <button
             type="button"
-            className="tw-inline-flex tw-items-center tw-px-4 tw-py-2 tw-border tw-border-transparent tw-shadow-sm tw-text-sm tw-font-medium tw-rounded-md tw-text-white tw-bg-gray-600 hover:tw-bg-gray-700 focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-offset-2 focus:tw-ring-gray-500"
+            className="inline-flex items-center px-4 py-2 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-gray-600 hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500"
         >
-            <svg className="-tw-ml-1 tw-mr-2 tw-h-5 tw-w-5" x-description="Heroicon name: solid/plus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+            <svg className="-ml-1 mr-2 h-5 w-5" x-description="Heroicon name: solid/plus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                 <path fillRule="evenodd" d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z" clipRule="evenodd" />
             </svg>
             New Project

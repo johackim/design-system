@@ -8,7 +8,7 @@ import Footer from '@components/footer';
 const Layout = ({ title, description, children, logo, links, backgroundImage, className }) => (
     <>
         <Header
-            className={`${backgroundImage && '!tw-bg-gray-900/50'}`}
+            className={`${backgroundImage && '!bg-gray-900/50'}`}
             title={title}
             description={description}
             logo={logo}

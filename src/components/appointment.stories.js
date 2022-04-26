@@ -16,7 +16,7 @@ Default.args = {
 };
 
 export const List = (args) => (
-    <div className="tw-divide-y dark:tw-divide-gray-400/[.50] tw-max-w-2xl">
+    <div className="divide-y dark:divide-gray-400/[.50] max-w-2xl">
         <Appointment {...args} />
         <Appointment {...args} />
         <Appointment {...args} />
@@ -30,7 +30,7 @@ List.args = {
 };
 
 export const WithButton = (args) => (
-    <div className="tw-divide-y dark:tw-divide-gray-400/[.50] tw-max-w-2xl">
+    <div className="divide-y dark:divide-gray-400/[.50] max-w-2xl">
         <Appointment {...args} />
         <Appointment {...args} />
         <Appointment {...args} />

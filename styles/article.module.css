@@ -1,5 +1,5 @@
 .article {
-    @apply tw-relative tw-text-gray-700;
+    @apply relative text-gray-700;
 }
 
 .article h1,
@@ -8,128 +8,128 @@
 .article h4,
 .article h5,
 .article h6 {
-    @apply tw-my-4;
+    @apply my-4;
     scroll-margin-top: 70px;
 }
 
 .article h1 {
-    @apply tw-text-4xl tw-font-bold;
+    @apply text-4xl font-bold;
 }
 
 .article h2 {
-    @apply tw-text-3xl tw-font-bold;
+    @apply text-3xl font-bold;
 }
 
 .article h3 {
-    @apply tw-text-2xl tw-font-bold;
+    @apply text-2xl font-bold;
 }
 
 .article h4 {
-    @apply tw-text-xl tw-font-bold;
+    @apply text-xl font-bold;
 }
 
 .article h5 {
-    @apply tw-text-lg tw-font-bold;
+    @apply text-lg font-bold;
 }
 
 .article > p:first-child {
-    @apply tw-text-lg tw-mt-4;
+    @apply text-lg mt-4;
 }
 
 .article p {
-    @apply tw-my-8 tw-leading-relaxed;
+    @apply my-8 leading-relaxed;
 }
 
 .article ol,
 .article ul {
-    @apply tw-list-inside tw-ml-6 tw-my-8;
+    @apply list-inside ml-6 my-8;
 }
 
 .article ul:not([class^="contains-task-list"]) {
-    @apply tw-list-disc;
+    @apply list-disc;
 }
 
 .article ol {
-    @apply tw-list-decimal tw-pl-0;
+    @apply list-decimal pl-0;
 }
 
 .article li {
-    @apply tw-my-4;
+    @apply my-4;
 }
 
 .article li > p {
-    @apply tw-my-0 tw-inline;
+    @apply my-0 inline;
 }
 
 .article a {
-    @apply tw-underline tw-break-all;
+    @apply underline break-all;
 }
 
 .article pre {
-    @apply tw-bg-gray-200 tw-px-4 tw-py-2 tw-my-4 tw-text-xs tw-break-words tw-rounded-md tw-whitespace-pre-wrap;
+    @apply bg-gray-200 px-4 py-2 my-4 text-xs break-words rounded-md whitespace-pre-wrap;
 }
 
 .article pre code {
-    @apply tw-p-0;
+    @apply p-0;
 }
 
 .article code {
-    @apply tw-bg-gray-200 tw-whitespace-pre-wrap tw-text-xs tw-rounded-md;
+    @apply bg-gray-200 whitespace-pre-wrap text-xs rounded-md;
     padding: 2px 6px;
 }
 
 .article figure {
-    @apply tw-inline-block;
+    @apply inline-block;
 }
 
 .article figure img {
-    @apply tw-align-top;
+    @apply align-top;
 }
 
 .article figure figcaption {
-    @apply tw-text-center tw-italic tw-mt-2;
+    @apply text-center italic mt-2;
 }
 
 .article table {
-    @apply tw-table-fixed;
+    @apply table-fixed;
     max-width: 100%;
     width: 100%;
 }
 
 .article table tr th {
-    @apply tw-px-4 tw-py-2;
+    @apply px-4 py-2;
 }
 
 .article table tr td {
-    @apply tw-border tw-border-gray-800 tw-px-4 tw-py-2;
+    @apply border border-gray-800 px-4 py-2;
 }
 
 .article blockquote {
-    @apply tw-border-l-4 tw-border-gray-700 tw-pl-4 tw-my-6 tw-text-lg tw-mx-0;
+    @apply border-l-4 border-gray-700 pl-4 my-6 text-lg mx-0;
 }
 
 .article em {
-    @apply tw-italic;
+    @apply italic;
 }
 
 .article ol.contains-task-list,
 .article ul.contains-task-list {
-    @apply tw-list-none tw-list-inside;
+    @apply list-none list-inside;
 }
 
 .article mark {
-    @apply tw-bg-gray-300;
+    @apply bg-gray-300;
 }
 
-:global(.tw-dark) .article {
-    @apply tw-text-gray-300;
+:global(.dark) .article {
+    @apply text-gray-300;
 }
 
-:global(.tw-dark) .article hr {
-    @apply tw-border-gray-800;
+:global(.dark) .article hr {
+    @apply border-gray-800;
 }
 
-:global(.tw-dark) .article pre,
-:global(.tw-dark) .article code {
-    @apply tw-bg-gray-800;
+:global(.dark) .article pre,
+:global(.dark) .article code {
+    @apply bg-gray-800;
 }

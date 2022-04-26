@@ -1,15 +1,15 @@
 import React from 'react';
 
 const Footer = ({ startYear, date, copyleft, children }) => (
-    <footer className="tw-container tw-m-auto tw-px-4 tw-py-8 tw-flex tw-items-center tw-justify-between tw-flex-wrap lg:tw-max-w-screen-lg tw-text-gray-700 dark:tw-text-gray-300">
+    <footer className="container m-auto px-4 py-8 flex items-center justify-between flex-wrap lg:max-w-screen-lg text-gray-700 dark:text-gray-300">
         <div>
-            <span className={`${copyleft ? 'tw-inline-block tw-transform tw-rotate-180' : ''}`}>&copy;</span>
-            <span className="tw-ml-2">
+            <span className={`${copyleft ? 'inline-block transform rotate-180' : ''}`}>&copy;</span>
+            <span className="ml-2">
                 {startYear && `${startYear}-`}
                 {date || new Date().getFullYear()}
             </span>
         </div>
-        <nav className="tw-grid tw-grid-flow-col tw-gap-2 tw-items-center">
+        <nav className="grid grid-flow-col gap-2 items-center">
             {children}
         </nav>
     </footer>

@@ -5,23 +5,23 @@ import Link from '@components/link';
 const Article = ({ title, dateUpdated, children, author, authorUrl }) => (
     <>
         {title && (
-            <div className="tw-my-4 tw-relative tw-border dark:tw-border-gray-800">
-                <h1 className="tw-h-64 tw-flex tw-flex-col tw-justify-center">
-                    <span className="tw-absolute tw-inset-0 tw-bg-gray-100 dark:tw-bg-gray-900 tw-opacity-80" />
-                    <span className="tw-transform tw-text-center tw-font-bold tw-px-4 tw-text-4xl tw-text-gray-600 dark:tw-text-gray-300">{title}</span>
+            <div className="my-4 relative border dark:border-gray-800">
+                <h1 className="h-64 flex flex-col justify-center">
+                    <span className="absolute inset-0 bg-gray-100 dark:bg-gray-900 opacity-80" />
+                    <span className="transform text-center font-bold px-4 text-4xl text-gray-600 dark:text-gray-300">{title}</span>
                 </h1>
             </div>
         )}
 
         {dateUpdated && (
-            <div className="tw-text-xs tw-mb-8 tw-text-gray-700 dark:tw-text-gray-300">
+            <div className="text-xs mb-8 text-gray-700 dark:text-gray-300">
                 <span>Mis à jour le&nbsp;</span>
                 <span>{new Date(dateUpdated).toLocaleDateString('fr-FR', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}</span>
                 {author && (
                     <span>
                         &nbsp;par&nbsp;
                         {authorUrl ? (
-                            <Link href={authorUrl} className="tw-underline">
+                            <Link href={authorUrl} className="underline">
                                 {author}
                             </Link>
                         ) : (

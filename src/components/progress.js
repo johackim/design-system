@@ -13,5 +13,5 @@ export default () => {
         document.addEventListener('scroll', scrollProgress);
     }, []);
 
-    return <div className="tw-bg-gray-600 tw-h-1 tw-z-30 tw-fixed tw-inset-0" style={{ width: `${progress}%` }} />;
+    return <div className="bg-gray-600 h-1 z-30 fixed inset-0" style={{ width: `${progress}%` }} />;
 };

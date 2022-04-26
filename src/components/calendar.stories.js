@@ -6,7 +6,7 @@ export default {
 };
 
 const Template = (args) => (
-    <div className="tw-max-w-sm">
+    <div className="max-w-sm">
         <Calendar {...args} />
     </div>
 );
