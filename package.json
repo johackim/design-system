@@ -1,9 +1,12 @@
 {
   "name": "@johackim/design-system",
-  "version": "1.3.1",
+  "version": "1.3.2",
   "description": "My personal design system",
+  "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
-  "files": ["dist/esm/index.js"],
+  "files": [
+    "dist/esm/index.js"
+  ],
   "author": "johackim",
   "dependencies": {
     "next": "^12.1.4"
@@ -27,6 +30,7 @@
     "@commitlint/config-conventional": "^16.2.1",
     "@heroicons/react": "^1.0.6",
     "@rollup/plugin-babel": "^5.3.1",
+    "@rollup/plugin-commonjs": "^22.0.0",
     "@rollup/plugin-node-resolve": "^13.2.1",
     "@storybook/addon-actions": "^6.4.20",
     "@storybook/addon-essentials": "^6.4.20",
@@ -54,6 +58,7 @@
     "react-dom": "^17.0.2",
     "rollup": "^2.70.1",
     "rollup-plugin-postcss": "^4.0.2",
+    "rollup-plugin-terser": "^7.0.2",
     "storybook-css-modules-preset": "^1.1.1",
     "storybook-tailwind-dark-mode": "^1.0.11",
     "tailwindcss": "^3.0.23",
