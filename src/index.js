@@ -31,4 +31,5 @@ export { default as Gallery } from '@components/gallery';
 export { default as Dropdown } from '@components/dropdown';
 export { default as Progress } from '@components/progress';
 export { default as Pricing } from '@components/pricing';
+export { default as Modal } from '@components/modal';
 export { default as Appointment } from '@components/appointment';
