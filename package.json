@@ -68,7 +68,8 @@
     "prepublishOnly": "npm run build",
     "build": "rollup -c",
     "watch": "rollup -c -w",
-    "storybook": "start-storybook -p 6006"
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "commitlint": {
     "extends": [
