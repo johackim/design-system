@@ -4,6 +4,7 @@ import { setup } from 'twind';
 
 setup({
     hash: true,
+    mode: 'silent',
     darkMode: 'class',
     theme: {
         extend: {
