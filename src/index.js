@@ -1,9 +1,7 @@
-import '@styles/roboto.css';
 import 'twind/shim';
 import { setup } from 'twind';
 
 setup({
-    hash: true,
     mode: 'silent',
     darkMode: 'class',
     theme: {
