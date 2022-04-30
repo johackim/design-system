@@ -66,6 +66,7 @@
     "twind": "^0.16.17"
   },
   "scripts": {
+    "deploy": "CI=true npx semantic-release",
     "prepublishOnly": "npm run build",
     "build": "rollup -c",
     "watch": "rollup -c -w",
