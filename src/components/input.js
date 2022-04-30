@@ -1,10 +1,10 @@
 import React from 'react';
 
-const Input = ({ type, label, name, value, onChange, className, placeholder, required, disabled }) => (
+const Input = ({ id, type, label, name, value, onChange, className, placeholder, required, disabled }) => (
     <div className={className}>
         {label && <label htmlFor={name} className="capitalize block text-sm font-medium leading-5 text-gray-700 dark:text-gray-300">{label}</label>}
         <input
-            id={name}
+            id={id || name}
             type={type}
             name={name}
             value={value}
