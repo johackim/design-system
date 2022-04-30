@@ -3,7 +3,7 @@ import React from 'react';
 import Button from '@components/button';
 
 const Hero = ({ children, preHead, headline, subHeadline, centered, backgroundImage }) => (
-    <section className={`${centered && 'h-screen'} flex justify-center text-center items-center mx-auto ${backgroundImage ? "before:content-[''] before:bg-[url('/background.jpg')] before:brightness-[.15] before:-z-10 before:absolute before:w-full before:h-full before:bg-cover before:bg-center" : ''}`}>
+    <section className={`${centered ? 'h-screen' : ''} flex justify-center text-center items-center mx-auto ${backgroundImage ? "before:content-[''] before:bg-[url('/background.jpg')] before:brightness-[.15] before:-z-10 before:absolute before:w-full before:h-full before:bg-cover before:bg-center" : ''}`}>
         <div className="px-2 sm:px-0">
             {preHead && <h3 className={`text-sm lg:text-lg my-4 ${backgroundImage ? 'text-gray-300' : 'text-gray-500 dark:text-gray-400'}`}>{preHead}</h3>}
 

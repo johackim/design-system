@@ -42,7 +42,7 @@ const Header = ({ title, description, logo, fixed, size, children, className }) 
                     <div className="hidden md:grid grid-flow-col gap-4 items-center">{children}</div>
 
                     <div className="md:hidden">
-                        <button type="button" onClick={() => setOpen(!isOpen)} className="bg-white dark:bg-transparent dark:hover:bg-gray-700 rounded-md p-2 inline-flex items-center justify-center text-gray-400 dark:text-gray-300 dark:hover:text-white hover:text-gray-500 hover:bg-gray-100 focus:outline-none">
+                        <button type="button" aria-label="menu" onClick={() => setOpen(!isOpen)} className="bg-white dark:bg-transparent dark:hover:bg-gray-700 rounded-md p-2 inline-flex items-center justify-center text-gray-400 dark:text-gray-300 dark:hover:text-white hover:text-gray-500 hover:bg-gray-100 focus:outline-none">
                             {isOpen ? (
                                 <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
