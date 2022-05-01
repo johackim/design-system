@@ -4,7 +4,7 @@ import { withForms } from '@twind/forms'
 import { setup } from 'twind';
 
 setup({
-    hash: true,
+    mode: 'silent',
     darkMode: 'class',
     theme: {
         extend: {
