@@ -60,7 +60,7 @@ const Header = ({ title, description, logo, fixed, size, children, className }) 
                 <div className="pt-2 pb-3 space-y-1 bg-white dark:bg-gray-900">
                     {children.filter(({ props }) => props?.href !== undefined).map(({ props }) => (
                         props.onClick ? (
-                            <button type="button" onClick={props.onClick} className="dark:text-gray-300 dark:hover:bg-gray-700 dark:hover:text-white text-gray-500 hover:bg-gray-100 hover:text-gray-900 block px-3 py-2 text-base font-medium" key={props.children}>{props.children}</button>
+                            <button type="button" onClick={props.onClick} className="w-full text-left dark:text-gray-300 dark:hover:bg-gray-700 dark:hover:text-white text-gray-500 hover:bg-gray-100 hover:text-gray-900 block px-3 py-2 text-base font-medium" key={props.children}>{props.children}</button>
                         ) : (
                             <Link href={props.href} key={props.children}>
                                 <a href={props.href} className="dark:text-gray-300 dark:hover:bg-gray-700 dark:hover:text-white text-gray-500 hover:bg-gray-100 hover:text-gray-900 block px-3 py-2 text-base font-medium">
