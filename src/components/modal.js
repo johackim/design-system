@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-const Modal = ({ children, onClick, isOpenDefault }) => {
+const Modal = ({ children, onClick, ...props }) => {
     const [isOpen, setOpen] = useState(false);
 
     const closeModal = () => {
@@ -9,8 +9,8 @@ const Modal = ({ children, onClick, isOpenDefault }) => {
     };
 
     useEffect(() => {
-        setOpen(isOpenDefault);
-    }, [isOpenDefault]);
+        setOpen(props.isOpen);
+    }, [props.isOpen]);
 
     useEffect(() => {
         document.addEventListener('mouseout', (e) => {
@@ -56,7 +56,7 @@ const Modal = ({ children, onClick, isOpenDefault }) => {
 Modal.defaultProps = {
     children: '',
     onClick: () => {},
-    isOpenDefault: false,
+    isOpen: false,
 };
 
 export default Modal;
