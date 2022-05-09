@@ -10,7 +10,7 @@ export default {
         { format: 'esm', file: 'dist/esm/index.js' },
         { format: 'cjs', file: 'dist/cjs/index.js', exports: 'named' },
     ],
-    external: ['react', 'react-dom', 'next/link'],
+    external: ['react', 'react-dom', 'next/link', 'next/router'],
     plugins: [
         nodeResolve(),
         babel({ babelHelpers: 'bundled' }),
