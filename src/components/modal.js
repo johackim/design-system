@@ -46,7 +46,7 @@ const Modal = ({ children, onClick, ...props }) => {
                 </div>
             </div>
 
-            <div className="transform text-center text-white lg:max-w-screen-lg">
+            <div className="transform text-center text-white lg:max-w-screen-lg p-4 md:p-0">
                 {children}
             </div>
         </div>
