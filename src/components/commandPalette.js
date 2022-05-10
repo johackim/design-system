@@ -6,26 +6,31 @@ const [K, ESC, ENTER, UP, DOWN] = [75, 27, 13, 38, 40];
 
 const commandPalette = ({ url, onClose, ...props }) => {
     const ref = useRef();
+    const refs = useRef([]);
     const router = useRouter();
-    const [state] = useState({ search: '' });
+    const [search, setSearch] = useState('');
     const [activeEntry, setActiveEntry] = useState(0);
     const [isOpen, setOpen] = useState(false);
     const [data, setData] = useState(props.data);
 
     const closeCommandPalette = () => {
         onClose();
+        setData([]);
+        setSearch('');
         setOpen(false);
     };
 
     const handleChange = async (e) => {
-        const { value: search } = e.target;
+        const { value } = e.target;
 
-        if (!url) return;
+        setSearch(value);
+
+        if (!url || value.length < 3) return;
 
         await fetch(url, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ search }),
+            body: JSON.stringify({ search: value }),
         })
             .then((res) => res.json())
             .then(({ results }) => {
@@ -76,15 +81,19 @@ const commandPalette = ({ url, onClose, ...props }) => {
     }, [isOpen]);
 
     useEffect(() => {
+        const scrollTo = (id) => refs.current[id].scrollIntoView(false);
+
         const handleUp = (event) => {
             if (event.keyCode === UP && activeEntry > 0) {
                 setActiveEntry(activeEntry - 1);
+                scrollTo(activeEntry - 1);
             }
         };
 
         const handleDown = (event) => {
             if (event.keyCode === DOWN && activeEntry < data.length - 1) {
                 setActiveEntry(activeEntry + 1);
+                scrollTo(activeEntry + 1);
             }
         };
 
@@ -112,8 +121,6 @@ const commandPalette = ({ url, onClose, ...props }) => {
         return () => window.removeEventListener('keydown', handleEnter);
     }, [activeEntry, data]);
 
-    const { search } = state;
-
     return (
         <div className={`fixed inset-0 z-50 overflow-y-auto p-4 sm:p-6 md:p-20 ${isOpen ? 'block' : 'hidden'}`} role="dialog" aria-modal="true">
             <div className="fixed inset-0 bg-gray-500 bg-opacity-25 transition-opacity" aria-hidden="true" />
@@ -129,18 +136,21 @@ const commandPalette = ({ url, onClose, ...props }) => {
                         placeholder="Rechercher..."
                         onChange={handleChange}
                         ref={(input) => input && input.focus()}
+                        value={search}
                         name="search"
                     />
                 </div>
 
                 {data.length > 0 && (
-                    <ul className="max-h-72 scroll-py-2 overflow-y-auto py-2 text-sm text-gray-800" id="options" role="listbox">
+                    <ul className="max-h-72 scroll-py-2 overflow-y-auto py-2 text-sm text-gray-800">
                         {data.map(({ title, href }, index) => (
-                            <li key={title} className={`cursor-default select-none px-4 py-2 ${activeEntry === index ? 'bg-gray-600 text-white' : ''}`}>
-                                <Link href={href}>
-                                    <a href={href}>{title}</a>
-                                </Link>
-                            </li>
+                            <Link key={title} href={href}>
+                                <a href={href} onClick={closeCommandPalette}>
+                                    <li key={title} onMouseMove={() => setActiveEntry(index)} className={`select-none px-4 py-2 ${activeEntry === index ? 'bg-gray-600 text-white' : ''}`} ref={(el) => { refs.current[index] = el; }}>
+                                        {title}
+                                    </li>
+                                </a>
+                            </Link>
                         ))}
                     </ul>
                 )}
