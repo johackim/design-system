@@ -123,7 +123,7 @@ const commandPalette = ({ url, onClose, ...props }) => {
 
     return (
         <div className={`fixed inset-0 z-50 overflow-y-auto p-4 sm:p-6 md:p-20 ${isOpen ? 'block' : 'hidden'}`} role="dialog" aria-modal="true">
-            <div className="fixed inset-0 bg-gray-500 bg-opacity-25 transition-opacity" aria-hidden="true" />
+            <div className="fixed inset-0 bg-black bg-opacity-25 transition-opacity" aria-hidden="true" />
 
             <div ref={ref} className="mx-auto max-w-xl transform divide-y divide-gray-100 overflow-hidden rounded-xl bg-white shadow-2xl ring-1 ring-black ring-opacity-5 transition-all">
                 <div className="relative">
