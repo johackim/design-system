@@ -56,7 +56,7 @@ const Header = ({ title, description, logo, fixed, size, children, className }) 
                     </div>
                 </div>
             </header>
-            <div className={`${isOpen ? 'block' : 'hidden'} sm:hidden z-20 mb-4 border-b dark:border-gray-800 fixed inset-x-0 ${fixed ? 'top-16' : ''}`}>
+            <div className={`${isOpen ? 'block' : 'hidden'} md:hidden z-20 mb-4 border-b dark:border-gray-800 fixed inset-x-0 ${fixed ? 'top-16' : ''}`}>
                 <div className="pt-2 pb-3 space-y-1 bg-white dark:bg-gray-900">
                     {children.filter(({ props }) => props?.href !== undefined).map(({ props }) => (
                         props.onClick ? (
