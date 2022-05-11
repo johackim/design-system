@@ -1,0 +1,10 @@
+.hero::before {
+    content: '';
+    background: url('/background.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    position: absolute;
+    filter: brightness(.15);
+    z-index: -10;
+}
