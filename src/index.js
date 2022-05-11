@@ -1,5 +1,6 @@
 import 'twind/shim';
 import { setup } from 'twind';
+import { withForms } from '@twind/forms';
 
 setup({
     mode: 'silent',
@@ -11,6 +12,7 @@ setup({
             },
         },
     },
+    preflight: withForms(),
 });
 
 export { default as Button } from '@components/button';
