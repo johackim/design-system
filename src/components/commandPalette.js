@@ -111,7 +111,7 @@ const commandPalette = ({ url, onClose, ...props }) => {
             if (event.keyCode === ENTER) {
                 event.preventDefault();
                 const href = data[activeEntry]?.href;
-                router.push(href);
+                if (href) router.push(href);
                 closeCommandPalette();
             }
         };
