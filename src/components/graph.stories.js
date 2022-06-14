@@ -1,4 +1,3 @@
-import { useState, useEffect } from 'react';
 import Graph from '@components/graph';
 
 export default {
