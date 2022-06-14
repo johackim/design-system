@@ -35,3 +35,4 @@ export { default as Pricing } from '@components/pricing';
 export { default as CommandPalette } from '@components/commandPalette';
 export { default as Modal } from '@components/modal';
 export { default as Appointment } from '@components/appointment';
+export { default as Message } from '@components/message';
