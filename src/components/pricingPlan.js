@@ -67,13 +67,15 @@ const PricingPlan = ({ name, head, price, reduction, features, currency, mensual
             </ul>
             <hr className="mb-2 dark:border-gray-700" />
             <div className="flex m-auto mb-2 dark:border-gray-700">
-                <Button onClick={handleClick} className="inline-block w-full mx-2">
-                    { isLoading ? (
-                        <span className="inline">Chargement...</span>
-                    ) : (
-                        <span>S'abonner maintenant</span>
-                    ) }
-                </Button>
+                {props.button ? props.button : (
+                    <Button onClick={handleClick} className="inline-block w-full mx-2">
+                        { isLoading ? (
+                            <span className="inline">Chargement...</span>
+                        ) : (
+                            <span>S'abonner maintenant</span>
+                        ) }
+                    </Button>
+                )}
             </div>
         </div>
     );
