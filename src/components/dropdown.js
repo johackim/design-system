@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { ChevronDownIcon } from '@heroicons/react/solid';
 import Button from '@components/button';
 
-const Dropdown = ({ children, label, className, simple, isOpenDefault }) => {
+const Dropdown = ({ children, label, className, simple, isOpenDefault, ...props }) => {
     const ref = useRef();
     const [isOpen, setOpen] = useState(isOpenDefault);
 
@@ -19,7 +19,7 @@ const Dropdown = ({ children, label, className, simple, isOpenDefault }) => {
 
     return (
         <div ref={ref} className="relative inline-block text-left text-gray-700 dark:text-gray-300">
-            <Button onClick={() => setOpen(!isOpen)} className={simple ? `${className} border-none !px-0 !py-0` : className} secondary>
+            <Button onClick={() => setOpen(!isOpen)} className={simple ? `${className} border-none !px-0 !py-0` : className} {...props} secondary>
                 {label}
                 <ChevronDownIcon className="-mr-1 ml-2 h-4 w-4" />
             </Button>
