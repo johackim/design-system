@@ -36,3 +36,4 @@ export { default as CommandPalette } from '@components/commandPalette';
 export { default as Modal } from '@components/modal';
 export { default as Appointment } from '@components/appointment';
 export { default as Message } from '@components/message';
+export { default as Notification } from '@components/notification';
