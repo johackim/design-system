@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 
-const Button = ({ href, secondary, children, onClick, className, ...props }) => {
+const Button = ({ href, secondary, children, onClick, className, ...rest }) => {
     const primaryClassName = `inline-flex rounded-md items-center justify-center px-5 py-2 border border-transparent text-white bg-gray-600 hover:bg-gray-700 dark:bg-gray-700 dark:hover:bg-gray-600 dark:hover:text-white dark:text-gray-300 focus:outline-none ${className}`;
 
     const secondaryClassName = `inline-flex rounded-md items-center justify-center px-5 py-2 border hover:border-gray-400 text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white dark:hover:border-white focus:outline-none ${className}`;
@@ -9,10 +9,10 @@ const Button = ({ href, secondary, children, onClick, className, ...props }) => 
     return (
         href ? (
             <Link href={href}>
-                <a href={href} className={secondary ? secondaryClassName : primaryClassName} {...props}>{children}</a>
+                <a href={href} className={secondary ? secondaryClassName : primaryClassName} {...rest}>{children}</a>
             </Link>
         ) : (
-            <button type="button" onClick={onClick} className={secondary ? secondaryClassName : primaryClassName} {...props}>{children}</button>
+            <button type="button" onClick={onClick} className={secondary ? secondaryClassName : primaryClassName} {...rest}>{children}</button>
         )
     );
 };

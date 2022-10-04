@@ -2,8 +2,8 @@ import React from 'react';
 
 import Button from '@components/button';
 
-const Empty = ({ title, subtitle, icon, button }) => (
-    <div className="text-center">
+const Empty = ({ title, subtitle, icon, button, ...rest }) => (
+    <div className="text-center" {...rest}>
         {icon}
         <h3 className="mt-2 text-md font-medium text-gray-900 dark:text-gray-300">{title}</h3>
         <p className="mt-1 text-sm text-gray-500 dark:text-gray-400">{subtitle}</p>
@@ -39,7 +39,7 @@ Empty.defaultProps = {
         <Button
             type="button"
         >
-            <svg className="-ml-1 mr-2 h-5 w-5" x-description="Heroicon name: solid/plus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+            <svg className="-ml-1 mr-2 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                 <path fillRule="evenodd" d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z" clipRule="evenodd" />
             </svg>
             New Project
