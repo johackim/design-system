@@ -6,8 +6,8 @@ const Header = ({ title, description, logo, fixed, size, children, className }) 
     const ref = useRef();
 
     const sizes = {
-        lg: 'lg:max-w-screen-lg',
         md: 'md:max-w-screen-md',
+        lg: 'lg:max-w-screen-lg',
         xl: 'md:max-w-screen-xl',
     };
 
