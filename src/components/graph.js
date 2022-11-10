@@ -3,7 +3,9 @@ import { ForceGraph2D } from 'react-force-graph';
 import tailwindColors from 'tailwindcss/colors';
 import { forceX, forceY } from 'd3';
 
-const Graph = ({ nodes, links, colors, width, height }) => {
+const OPACITY_SCALE = 2;
+
+const Graph = ({ nodes, links, width, height, colors }) => {
     const ref = useRef();
 
     const [displayWidth] = useState(width || window.innerWidth);
@@ -16,17 +18,11 @@ const Graph = ({ nodes, links, colors, width, height }) => {
             const a = nodes.find((node) => node.id === link.source);
             const b = nodes.find((node) => node.id === link.target);
 
-            if (a && !a?.neighbors) a.neighbors = [];
-            if (b && !b?.neighbors) b.neighbors = [];
+            if (a) a.neighbors = [...a?.neighbors || [], b];
+            if (b) b.neighbors = [...b?.neighbors || [], a];
 
-            a?.neighbors.push(b);
-            b?.neighbors.push(a);
-
-            if (a && !a?.links) a.links = [];
-            if (b && !b?.links) b.links = [];
-
-            a?.links.push(link);
-            b?.links.push(link);
+            if (a) a.links = [...a?.links || [], link];
+            if (b) b.links = [...b?.links || [], link];
         });
     }, []);
 
@@ -66,6 +62,16 @@ const Graph = ({ nodes, links, colors, width, height }) => {
         return `rgba(${parseInt(r, 16)}, ${parseInt(g, 16)}, ${parseInt(b, 16)}, ${opacity})`;
     };
 
+    const onZoom = ({ k }) => {
+        const scale = k * OPACITY_SCALE;
+        const scaledOpacity = Math.max((scale - 1) / 3.75, 0);
+        const textColor = hexToRgb(colors.text, scaledOpacity);
+
+        nodes.forEach((node) => {
+            node.textColor = textColor;
+        });
+    };
+
     return (
         <ForceGraph2D
             ref={ref}
@@ -77,14 +83,18 @@ const Graph = ({ nodes, links, colors, width, height }) => {
                 if (hoverNode) {
                     const hoverNodeNeighbors = (hoverNode.neighbors || []).map(({ id }) => id);
 
-                    if (node !== hoverNode && !hoverNodeNeighbors.includes(node.id)) {
-                        return hexToRgb(colors.textColor);
+                    if (hoverNodeNeighbors.includes(node.id)) {
+                        return colors.default;
+                    }
+
+                    if (node !== hoverNode) {
+                        return hexToRgb(colors.text);
                     }
                 }
 
-                return highlightNodes.has(node) ? colors.selectedColor : colors.defaultColor;
+                return highlightNodes.has(node) ? colors.selected : colors.default;
             }}
-            linkColor={(link) => (highlightLinks.has(link) ? colors.selectedColor : colors.defaultColor)}
+            linkColor={(link) => (highlightLinks.has(link) ? colors.selected : colors.link)}
             nodeCanvasObjectMode={() => 'after'}
             onNodeHover={handleNodeHover}
             onNodeDrag={handleNodeHover}
@@ -93,20 +103,25 @@ const Graph = ({ nodes, links, colors, width, height }) => {
                 highlightNodes.clear();
                 highlightLinks.clear();
             }}
+            onZoom={onZoom}
             nodeCanvasObject={(node, ctx, globalScale) => {
                 const label = node.id;
                 const fontSize = 12 / globalScale;
                 ctx.font = `${fontSize}px Sans-Serif`;
                 ctx.textAlign = 'center';
                 ctx.textBaseline = 'middle';
-                ctx.fillStyle = colors.textColor;
+                ctx.fillStyle = node?.textColor || colors.text;
                 ctx.transition = 'opacity .3s';
 
                 if (hoverNode) {
                     const hoverNodeNeighbors = (hoverNode.neighbors || []).map(({ id }) => id);
 
                     if (node !== hoverNode && !hoverNodeNeighbors.includes(node.id)) {
-                        ctx.fillStyle = hexToRgb(colors.textColor);
+                        ctx.fillStyle = hexToRgb(colors.text);
+                    }
+
+                    if (node === hoverNode) {
+                        ctx.font = `${18 / globalScale}px Sans-Serif`;
                     }
                 }
 
@@ -120,9 +135,10 @@ Graph.defaultProps = {
     links: [],
     nodes: [],
     colors: {
-        selectedColor: tailwindColors.cyan['500'],
-        defaultColor: tailwindColors.gray['500'],
-        textColor: tailwindColors.gray['800'],
+        selected: tailwindColors.cyan['500'],
+        default: tailwindColors.gray['500'],
+        text: tailwindColors.gray['800'],
+        link: tailwindColors.gray['50'],
     },
 };
 
