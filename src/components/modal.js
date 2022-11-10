@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-const Modal = ({ children, onClick, ...props }) => {
+const Modal = ({ children, onClick, exitpopup, ...props }) => {
     const [isOpen, setOpen] = useState(false);
 
     const closeModal = () => {
@@ -14,6 +14,8 @@ const Modal = ({ children, onClick, ...props }) => {
 
     useEffect(() => {
         document.addEventListener('mouseout', (e) => {
+            if (!exitpopup) return;
+
             if (!e.toElement && !e.relatedTarget) {
                 if (typeof window !== 'undefined' && !localStorage.getItem('exitpopup')) {
                     localStorage.setItem('exitpopup', true);
@@ -57,6 +59,7 @@ Modal.defaultProps = {
     children: '',
     onClick: () => {},
     isOpen: false,
+    exitpopup: false,
 };
 
 export default Modal;
