@@ -51,3 +51,10 @@ Simple.args = {
     ...Default.args,
     simple: true,
 };
+
+export const Dots = Template.bind({});
+
+Dots.args = {
+    ...Default.args,
+    dots: true,
+};
