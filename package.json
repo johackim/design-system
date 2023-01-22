@@ -9,7 +9,7 @@
   ],
   "author": "johackim",
   "dependencies": {
-    "next": "^12.1.4"
+    "next": "^13.0.5"
   },
   "keywords": [
     "design-system",
