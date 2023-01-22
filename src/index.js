@@ -41,4 +41,5 @@ export { default as Modal } from '@components/modal';
 export { default as Appointment } from '@components/appointment';
 export { default as Message } from '@components/message';
 export { default as Notification } from '@components/notification';
+export { default as SidebarLayout } from '@components/sidebarLayout';
 export { default as Checkbox } from '@components/checkbox';
