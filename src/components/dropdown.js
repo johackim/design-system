@@ -7,7 +7,7 @@ const Dropdown = ({ children, label, className, simple, dots, isOpenDefault, ...
     const [isOpen, setOpen] = useState(isOpenDefault);
 
     const handleClickOutside = (e) => {
-        if (!ref.current.contains(e.target)) {
+        if (!ref.current?.contains(e.target)) {
             setOpen(false);
         }
     };

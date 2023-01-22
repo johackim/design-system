@@ -45,7 +45,7 @@ const commandPalette = ({ url, onClose, ...props }) => {
 
     useEffect(() => {
         const handleClickOutside = (e) => {
-            if (!ref.current.contains(e.target)) {
+            if (!ref.current?.contains(e.target)) {
                 closeCommandPalette();
             }
         };

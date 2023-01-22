@@ -13,7 +13,7 @@ const Header = ({ title, description, logo, fixed, size, children, className }) 
 
     useEffect(() => {
         const handleClickOutside = (e) => {
-            if (!ref.current.contains(e.target)) {
+            if (!ref.current?.contains(e.target)) {
                 setOpen(false);
             }
         };

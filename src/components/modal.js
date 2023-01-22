@@ -12,7 +12,7 @@ const Modal = ({ title, description, buttons, children, onClose, right, type, ..
     };
 
     const handleClickOutside = (e) => {
-        if (!ref.current.contains(e.target)) {
+        if (!ref.current?.contains(e.target)) {
             onClose();
             closeModal();
         }
