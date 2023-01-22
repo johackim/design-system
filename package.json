@@ -73,7 +73,7 @@
     "build": "rollup -c",
     "watch": "rollup -c -w",
     "storybook": "NODE_OPTIONS=--openssl-legacy-provider start-storybook -p 6006",
-    "build-storybook": "NODE_OPTIONS=--openssl-legacy-provider build-storybook"
+    "build-storybook": "build-storybook"
   },
   "commitlint": {
     "extends": [
