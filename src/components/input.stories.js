@@ -24,3 +24,10 @@ WithLabel.args = {
     ...Input.defaultProps,
     label: 'Label',
 };
+
+export const WithAddOn = Template.bind({});
+
+WithAddOn.args = {
+    ...Input.defaultProps,
+    addOn: 'https://',
+};
