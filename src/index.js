@@ -24,6 +24,7 @@ export { default as Input } from '@components/input';
 export { default as Card } from '@components/card';
 export { default as Badge } from '@components/badge';
 export { default as Empty } from '@components/empty';
+export { default as H1 } from '@components/h1';
 export { default as Loading } from '@components/loading';
 export { default as Layout } from '@components/layout';
 export { default as Select } from '@components/select';
