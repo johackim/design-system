@@ -11,13 +11,6 @@ const Modal = ({ title, description, buttons, children, onClose, right, type, ..
         setOpen(false);
     };
 
-    const handleClickOutside = (e) => {
-        if (!ref.current?.contains(e.target)) {
-            onClose();
-            closeModal();
-        }
-    };
-
     useEffect(() => {
         setOpen(props.isOpen);
     }, [props.isOpen]);
@@ -35,6 +28,15 @@ const Modal = ({ title, description, buttons, children, onClose, right, type, ..
     }, []);
 
     useEffect(() => {
+        if (type === 'fullscreen') return false;
+
+        const handleClickOutside = (e) => {
+            if (!ref.current?.contains(e.target)) {
+                onClose();
+                closeModal();
+            }
+        };
+
         document.addEventListener('click', handleClickOutside, true);
         return () => document.removeEventListener('click', handleClickOutside, true);
     }, []);
