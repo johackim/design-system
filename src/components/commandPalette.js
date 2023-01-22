@@ -144,12 +144,10 @@ const commandPalette = ({ url, onClose, ...props }) => {
                 {data.length > 0 && (
                     <ul className="max-h-72 scroll-py-2 overflow-y-auto py-2 text-sm text-gray-800">
                         {data.map(({ title, href }, index) => (
-                            <Link key={title} href={href}>
-                                <a href={href} onClick={closeCommandPalette}>
-                                    <li key={title} onMouseMove={() => setActiveEntry(index)} className={`select-none px-4 py-2 ${activeEntry === index ? 'bg-gray-600 text-white' : ''}`} ref={(el) => { refs.current[index] = el; }}>
-                                        {title}
-                                    </li>
-                                </a>
+                            <Link key={title} href={href} onClick={closeCommandPalette}>
+                                <li key={title} onMouseMove={() => setActiveEntry(index)} className={`select-none px-4 py-2 ${activeEntry === index ? 'bg-gray-600 text-white' : ''}`} ref={(el) => { refs.current[index] = el; }}>
+                                    {title}
+                                </li>
                             </Link>
                         ))}
                     </ul>

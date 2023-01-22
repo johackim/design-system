@@ -28,15 +28,13 @@ const Header = ({ title, description, logo, fixed, size, children, className }) 
             <header ref={ref} className={`flex shadow-md inset-x-0 h-16 items-center z-20 text-gray-700 dark:bg-gray-900 dark:text-gray-300 bg-white ${fixed ? 'fixed top-0' : ''} ${className}`}>
                 <div className={`container m-auto flex items-center justify-between flex-wrap px-4 ${sizes[size]}`}>
                     <Link href="/">
-                        <a href="/">
-                            <div className="flex items-center">
-                                <img src={logo} alt="logo" className="rounded-full w-12" width="48" height="48" />
-                                <div className="ml-2">
-                                    <div className="font-bold leading-none">{title}</div>
-                                    <div className="text-sm leading-none">{description}</div>
-                                </div>
+                        <div className="flex items-center">
+                            <img src={logo} alt="logo" className="rounded-full w-12" width="48" height="48" />
+                            <div className="ml-2">
+                                <div className="font-bold leading-none">{title}</div>
+                                <div className="text-sm leading-none">{description}</div>
                             </div>
-                        </a>
+                        </div>
                     </Link>
 
                     <div className="hidden md:grid grid-flow-col gap-4 items-center">{children}</div>
@@ -62,10 +60,8 @@ const Header = ({ title, description, logo, fixed, size, children, className }) 
                         props.onClick ? (
                             <button type="button" onClick={props.onClick} className="w-full text-left dark:text-gray-300 dark:hover:bg-gray-700 dark:hover:text-white text-gray-500 hover:bg-gray-100 hover:text-gray-900 block px-3 py-2 text-base font-medium" key={props.children}>{props.children}</button>
                         ) : (
-                            <Link href={props.href} key={props.children}>
-                                <a href={props.href} className="dark:text-gray-300 dark:hover:bg-gray-700 dark:hover:text-white text-gray-500 hover:bg-gray-100 hover:text-gray-900 block px-3 py-2 text-base font-medium">
-                                    {props.children}
-                                </a>
+                            <Link href={props.href} key={props.children} className="dark:text-gray-300 dark:hover:bg-gray-700 dark:hover:text-white text-gray-500 hover:bg-gray-100 hover:text-gray-900 block px-3 py-2 text-base font-medium">
+                                {props.children}
                             </Link>
                         )
                     ))}
