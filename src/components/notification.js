@@ -15,14 +15,13 @@ const Notification = ({ title, message, type, className, onClose, timeout, ...pr
 
         if (props.isOpen && timeout) {
             setTimeout(() => {
-                onClose();
-                setOpen(false);
+                close();
             }, timeout * 1000);
         }
     }, [props.isOpen]);
 
     return (
-        <div className={`pointer-events-none fixed inset-0 items-end px-4 py-6 sm:items-start sm:p-6 z-50 ${isOpen ? 'flex' : 'hidden'} ${className}`} role="alert">
+        <div className={`pointer-events-none fixed inset-0 items-end px-4 py-6 sm:items-start sm:p-6 z-50 ${isOpen ? 'flex' : 'hidden'} ${className}`.trim()} role="alert">
             <div className="flex w-full flex-col items-center space-y-4 sm:items-end">
                 <div className="pointer-events-auto w-full max-w-sm overflow-hidden rounded-lg bg-white shadow-lg ring-1 ring-black ring-opacity-5">
                     <div className="p-4">
@@ -56,6 +55,7 @@ Notification.defaultProps = {
     type: 'success',
     message: 'message',
     className: '',
+    onClose: () => {},
 };
 
 export default Notification;
