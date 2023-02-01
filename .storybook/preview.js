@@ -1,20 +1,17 @@
 import '@styles/roboto.css';
-import 'twind/shim';
-import { withForms } from '@twind/forms'
-import { setup } from 'twind';
+import { install, defineConfig } from '@twind/core';
+import presetAutoprefix from '@twind/preset-autoprefix';
+import presetTailwind from '@twind/preset-tailwind';
 
-setup({
-    mode: 'silent',
+const config = defineConfig({
     darkMode: 'class',
-    theme: {
-        extend: {
-            fontFamily: {
-                sans: 'Roboto, sans-serif',
-            },
-        },
-    },
-    preflight: withForms(),
+    presets: [
+        presetAutoprefix(),
+        presetTailwind(),
+    ],
 });
+
+install(config);
 
 export const parameters = {
     actions: { argTypesRegex: "^on[A-Z].*" },
@@ -37,4 +34,8 @@ export const parameters = {
             },
         ],
     },
+};
+
+export const globalTypes = {
+    darkMode: true,
 };

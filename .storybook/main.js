@@ -1,7 +1,5 @@
-const path = require('path');
-
-module.exports = {
-    stories: ['../**/*.stories.js'],
+export default {
+    stories: ['../src/**/*.stories.js'],
     addons: [
         'storybook-tailwind-dark-mode',
         'storybook-css-modules-preset',
@@ -17,14 +15,9 @@ module.exports = {
             },
         },
     ],
-    framework: "@storybook/react",
-    webpackFinal: async (config, { configType }) => {
-        config.resolve.alias = {
-            ...config.resolve.alias,
-            '@components': path.resolve(__dirname, "../src/components"),
-            '@styles': path.resolve(__dirname, "../styles"),
-        };
-        return config;
+    framework: {
+        name: '@storybook/react-webpack5',
+        options: {},
     },
     staticDirs: ['../public'],
 };

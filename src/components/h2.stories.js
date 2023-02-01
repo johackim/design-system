@@ -9,4 +9,7 @@ const Template = (args) => <H2 {...args} />;
 
 export const Default = Template.bind({});
 
-Default.args = H2.defaultProps;
+Default.args = {
+    ...H2.defaultProps,
+    children: 'Title H2',
+};

@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { useRouter } from 'next/router';
 import Link from 'next/link';
 
 const [K, ESC, ENTER, UP, DOWN] = [75, 27, 13, 38, 40];
@@ -7,7 +6,6 @@ const [K, ESC, ENTER, UP, DOWN] = [75, 27, 13, 38, 40];
 const commandPalette = ({ url, onClose, ...props }) => {
     const ref = useRef();
     const refs = useRef([]);
-    const router = useRouter();
     const [search, setSearch] = useState('');
     const [activeEntry, setActiveEntry] = useState(0);
     const [isOpen, setOpen] = useState(false);
@@ -111,7 +109,7 @@ const commandPalette = ({ url, onClose, ...props }) => {
             if (event.keyCode === ENTER) {
                 event.preventDefault();
                 const href = data[activeEntry]?.href;
-                if (href) router.push(href);
+                if (href) window.location.href = href;
                 closeCommandPalette();
             }
         };

@@ -6,6 +6,7 @@ const Input = ({ id, type, label, name, placeholder, className, disabled, addOn,
             id={id || name}
             type={type}
             name={name}
+            disabled={disabled}
             className={`p-2 border border-gray-300 rounded-md focus:border-gray-300 focus:outline-none focus:shadow-outline-none focus:ring-0 text-gray-700 dark:bg-transparent dark:border-gray-500 dark:text-gray-300 dark:focus:border-gray-300 ${disabled ? 'bg-gray-200 dark:!bg-gray-700 cursor-not-allowed' : ''} ${className.includes('w-full') ? 'w-full' : ''} ${addOn ? 'flex rounded-none !rounded-r-md' : ''}`}
             placeholder={placeholder || name}
             {...rest}
