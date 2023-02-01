@@ -1,6 +1,6 @@
 {
   "name": "@johackim/design-system",
-  "version": "1.19.0",
+  "version": "1.20.0",
   "description": "My personal design system",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
