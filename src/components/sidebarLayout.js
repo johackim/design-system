@@ -29,7 +29,7 @@ const sidebarLayout = ({ children, className, links, logo }) => {
                             </div>
                             <nav className="mt-5 space-y-1 px-2">
                                 {links.map(({ href, icon, name, active }) => (
-                                    <Link href={href} key={name} className={`hover:text-white group flex items-center px-2 py-2 text-base font-medium rounded-md ${active ? 'bg-gray-900 !text-white' : 'text-gray-300 hover:bg-gray-700'}`}>
+                                    <Link href={href} key={name} className={`hover:text-white group flex items-center px-2 py-2 text-base font-medium rounded-md ${active ? 'bg-gray-900 !text-white' : '!text-gray-300 hover:bg-gray-700'}`}>
                                         {icon}
                                         {name}
                                     </Link>
@@ -37,7 +37,7 @@ const sidebarLayout = ({ children, className, links, logo }) => {
                             </nav>
                         </div>
                         <nav className="p-2">
-                            <Link href="/logout" className="text-gray-300 hover:bg-gray-700 hover:text-white group flex items-center px-2 py-2 text-base font-medium rounded-md">
+                            <Link href="/logout" className="!text-gray-300 hover:bg-gray-700 hover:!text-white group flex items-center px-2 py-2 text-base font-medium rounded-md">
                                 <LogoutIcon className="mr-4 h-6 w-6" />
                                 Sign out
                             </Link>
@@ -56,7 +56,7 @@ const sidebarLayout = ({ children, className, links, logo }) => {
                         </div>
                         <nav className="mt-5 flex-1 space-y-1 px-2">
                             {links.map(({ href, icon, name, active }) => (
-                                <Link href={href} key={name} className={`hover:text-white group flex items-center px-2 py-2 text-base font-medium rounded-md ${active ? 'bg-gray-900 !text-white' : 'text-gray-300 hover:bg-gray-700'}`}>
+                                <Link href={href} key={name} className={`hover:text-white group flex items-center px-2 py-2 text-base font-medium rounded-md ${active ? 'bg-gray-900 !text-white' : '!text-gray-300 hover:!text-white hover:bg-gray-700'}`}>
                                     {icon}
                                     {name}
                                 </Link>
@@ -64,7 +64,7 @@ const sidebarLayout = ({ children, className, links, logo }) => {
                         </nav>
                     </div>
                     <nav className="p-2">
-                        <Link href="/logout" data-test="logout" className="text-gray-300 hover:bg-gray-700 hover:text-white group flex items-center px-2 py-2 text-base font-medium rounded-md">
+                        <Link href="/logout" data-test="logout" className="!text-gray-300 hover:bg-gray-700 hover:!text-white group flex items-center px-2 py-2 text-base font-medium rounded-md">
                             <LogoutIcon className="mr-4 h-6 w-6" />
                             Sign out
                         </Link>

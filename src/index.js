@@ -1,19 +1,16 @@
-import 'twind/shim';
-import { setup } from 'twind';
-import { withForms } from '@twind/forms';
+import { install, defineConfig } from '@twind/core';
+import presetAutoprefix from '@twind/preset-autoprefix';
+import presetTailwind from '@twind/preset-tailwind';
 
-setup({
-    mode: 'silent',
+const config = defineConfig({
     darkMode: 'class',
-    theme: {
-        extend: {
-            fontFamily: {
-                sans: 'Roboto, sans-serif',
-            },
-        },
-    },
-    preflight: withForms(),
+    presets: [
+        presetAutoprefix(),
+        presetTailwind(),
+    ],
 });
+
+install(config);
 
 export { default as Button } from '@components/button';
 export { default as Link } from '@components/link';
