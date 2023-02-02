@@ -5,7 +5,10 @@ module.exports = {
             'module-resolver',
             {
                 alias: {
-                    '@components': './src/components',
+                    '@atoms': './src/atoms',
+                    '@molecules': './src/molecules',
+                    '@organisms': './src/organisms',
+                    '@templates': './src/templates',
                     '@styles': './styles',
                 },
             },

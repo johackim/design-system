@@ -47,6 +47,7 @@
     "@twind/forms": "^0.1.4",
     "@twind/preset-autoprefix": "^1.0.7",
     "@twind/preset-tailwind": "^1.1.4",
+    "@twind/preset-tailwind-forms": "^1.1.2",
     "autoprefixer": "^10.4.13",
     "babel-loader": "^8.3.0",
     "babel-plugin-module-resolver": "^4.1.0",
@@ -77,7 +78,7 @@
     "prepublishOnly": "npm run build",
     "build": "rollup -c",
     "watch": "rollup -c -w",
-    "storybook": "storybook dev -p 6006",
+    "storybook": "storybook dev --no-open -p 6006",
     "build-storybook": "storybook build"
   },
   "commitlint": {
