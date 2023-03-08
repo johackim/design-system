@@ -17,6 +17,7 @@ install(config);
 export { default as Link } from '@atoms/link';
 export { default as Input } from '@atoms/input';
 export { default as Badge } from '@atoms/badge';
+export { default as Banner } from '@atoms/banner';
 export { default as Select } from '@atoms/select';
 export { default as Switch } from '@atoms/switch';
 export { default as Button } from '@atoms/button';
