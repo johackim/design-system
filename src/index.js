@@ -41,6 +41,7 @@ export { default as Hero } from '@organisms/hero';
 export { default as Modal } from '@organisms/modal';
 export { default as Header } from '@organisms/header';
 export { default as Footer } from '@organisms/footer';
+export { default as Feature } from '@organisms/feature';
 export { default as Pricing } from '@organisms/pricing';
 export { default as CommandPalette } from '@organisms/commandPalette';
 
