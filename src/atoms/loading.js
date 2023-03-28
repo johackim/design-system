@@ -2,12 +2,14 @@ import React from 'react';
 
 const Loading = ({ text, size, className, ...rest }) => {
     const circleClassName = {
+        base: 'w-4 h-4',
         sm: 'w-4 h-4',
         md: 'w-6 h-6',
         xl: 'w-8 h-8',
     };
 
     const textClassName = {
+        base: 'text-base',
         sm: 'text-sm',
         md: 'text-xl',
         xl: 'text-3xl',
@@ -28,7 +30,7 @@ const Loading = ({ text, size, className, ...rest }) => {
 Loading.defaultProps = {
     text: 'Loading...',
     className: '',
-    size: 'sm',
+    size: 'base',
 };
 
 export default Loading;
