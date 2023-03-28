@@ -1,9 +1,9 @@
-import { install, defineConfig } from '@twind/core';
+import { install } from '@twind/core';
 import presetAutoprefix from '@twind/preset-autoprefix';
 import presetTailwind from '@twind/preset-tailwind';
 import presetTailwindForms from '@twind/preset-tailwind-forms';
 
-const config = defineConfig({
+install({
     darkMode: 'class',
     presets: [
         presetAutoprefix(),
@@ -11,8 +11,6 @@ const config = defineConfig({
         presetTailwindForms(),
     ],
 });
-
-install(config);
 
 export { default as Link } from '@atoms/link';
 export { default as Input } from '@atoms/input';
