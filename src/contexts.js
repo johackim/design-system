@@ -50,13 +50,15 @@ export const useNotification = () => useContext(NotificationContext);
 
 export const ModalContext = createContext({
     add: () => {},
+    remove: () => {},
+    modals: [],
 });
 
 export const ModalProvider = ({ children }) => {
     const [modals, setModals] = useState([]);
 
     const value = useMemo(() => ({
-        ...modals,
+        modals,
         add: (data) => setModals((m) => [...m, { id: Math.random(), ...data }]),
         remove: (id) => setModals((m) => m.filter((modal) => modal.id !== id)),
     }), [modals]);
