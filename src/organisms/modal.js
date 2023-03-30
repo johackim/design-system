@@ -16,8 +16,10 @@ const Modal = ({ title, description, children, onClose, header, footer, fullscre
     }, []);
 
     useEffect(() => {
+        if (fullscreen) return () => {};
+
         const handleClickOutside = (e) => {
-            if (!fullscreen && !ref.current?.contains(e.target)) {
+            if (!ref.current?.contains(e.target)) {
                 onClose();
             }
         };
