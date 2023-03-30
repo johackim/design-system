@@ -1,3 +1,7 @@
+:global(body) {
+    @apply !block;
+}
+
 :global(#__next), :global(#storybook) {
     @apply h-screen flex flex-col justify-between;
 }
