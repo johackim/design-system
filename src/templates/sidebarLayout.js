@@ -66,8 +66,8 @@ const sidebarLayout = ({ children, className, links, logo }) => {
                         </nav>
                     </div>
                     <nav className="p-2">
-                        {links.filter((link) => link.footer).map(({ href, icon, name, active }) => (
-                            <Link href={href} key={name} className={`hover:text-white group flex items-center px-2 py-2 text-base font-medium rounded-md ${active ? 'bg-gray-900 !text-white' : '!text-gray-300 hover:!text-white hover:bg-gray-700'}`}>
+                        {links.filter((link) => link.footer).map(({ href, icon, name, active, footer, ...rest }) => (
+                            <Link href={href} key={name} className={`hover:text-white group flex items-center px-2 py-2 text-base font-medium rounded-md ${active ? 'bg-gray-900 !text-white' : '!text-gray-300 hover:!text-white hover:bg-gray-700'}`} {...rest}>
                                 {icon}
                                 {name}
                             </Link>
