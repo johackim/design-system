@@ -31,3 +31,12 @@ WithAddOn.args = {
     ...Input.defaultProps,
     addOn: 'https://',
 };
+
+export const WithPassword = Template.bind({});
+
+WithPassword.args = {
+    ...Input.defaultProps,
+    value: 'password',
+    type: 'password',
+    showPassword: true,
+};
