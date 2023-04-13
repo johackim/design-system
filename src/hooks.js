@@ -51,6 +51,7 @@ export const useNotification = () => useContext(NotificationContext);
 export const ModalContext = createContext({
     add: () => {},
     remove: () => {},
+    isOpen: false,
     modals: [],
 });
 
@@ -61,6 +62,7 @@ export const ModalProvider = ({ children }) => {
         modals,
         add: (data) => setModals((m) => [...m, { id: Math.random(), ...data }]),
         remove: (id) => setModals((m) => m.filter((modal) => modal.id !== id)),
+        isOpen: (id) => modals.some((modal) => modal.id === id),
     }), [modals]);
 
     return (
@@ -86,12 +88,8 @@ export const Compose = ({ components, children }) => (
     components.reduceRight((acc, Comp) => <Comp>{acc}</Comp>, children)
 );
 
-export const AppProvider = ({ children }) => {
-    const providers = { NotificationProvider, ModalProvider };
-
-    return (
-        <Compose components={Object.values(providers)}>
-            {children}
-        </Compose>
-    );
-};
+export const AppProvider = ({ children }) => (
+    <Compose components={Object.values({ NotificationProvider, ModalProvider })}>
+        {children}
+    </Compose>
+);
