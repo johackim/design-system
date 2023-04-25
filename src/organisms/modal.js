@@ -24,8 +24,8 @@ const Modal = ({ title, description, children, onClose, header, footer, fullscre
             }
         };
 
-        document.addEventListener('click', handleClickOutside, true);
-        return () => document.removeEventListener('click', handleClickOutside, true);
+        document.addEventListener('mousedown', handleClickOutside, true);
+        return () => document.removeEventListener('mousedown', handleClickOutside, true);
     }, []);
 
     if (fullscreen) {
