@@ -79,6 +79,7 @@ Header.defaultProps = {
     description: 'Description',
     logo: 'https://svgur.com/i/csw.svg',
     className: '',
+    children: [],
 };
 
 export default Header;
