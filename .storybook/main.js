@@ -3,9 +3,9 @@ export default {
     addons: [
         'storybook-tailwind-dark-mode',
         'storybook-css-modules-preset',
-        "@storybook/addon-links",
-        "@storybook/addon-essentials",
-        "@storybook/addon-interactions",
+        '@storybook/addon-links',
+        '@storybook/addon-essentials',
+        '@storybook/addon-interactions',
         {
             name: '@storybook/addon-postcss',
             options: {
@@ -20,4 +20,7 @@ export default {
         options: {},
     },
     staticDirs: ['../public'],
+    docs: {
+        autodocs: true,
+    },
 };
