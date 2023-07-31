@@ -13,6 +13,7 @@ install({
 });
 
 export { default as Link } from '@atoms/link';
+export { default as Text } from '@atoms/text';
 export { default as Input } from '@atoms/input';
 export { default as Badge } from '@atoms/badge';
 export { default as Banner } from '@atoms/banner';
