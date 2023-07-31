@@ -18,6 +18,11 @@ import { Hero } from '@johackim/design-system';
 export default () => <Hero />;
 ```
 
+## Inspirations
+
+- [Mantine](https://mantine.dev/)
+- [Tailwind UI](https://tailwindui.com/)
+
 ## Support me
 
 I'd love to work on this project, but my time on this earth is limited, support my work to give me more time!
