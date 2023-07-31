@@ -3,7 +3,7 @@ const Avatar = ({ src }) => (
 );
 
 Avatar.defaultProps = {
-    src: 'https://www.gravatar.com/avatar/00000000000000000000000000000000?d=mp&f=y',
+    src: 'https://gravatar.com/avatar/000?d=mp&f=y',
 };
 
 export default Avatar;
