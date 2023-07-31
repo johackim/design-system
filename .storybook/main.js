@@ -6,14 +6,6 @@ export default {
         '@storybook/addon-links',
         '@storybook/addon-essentials',
         '@storybook/addon-interactions',
-        {
-            name: '@storybook/addon-postcss',
-            options: {
-                postcssLoaderOptions: {
-                    implementation: require('postcss'),
-                },
-            },
-        },
     ],
     framework: {
         name: '@storybook/react-webpack5',
