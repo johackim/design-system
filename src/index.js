@@ -30,6 +30,7 @@ export { default as Card } from '@molecules/card';
 export { default as Empty } from '@molecules/empty';
 export { default as Table } from '@molecules/table';
 export { default as Panel } from '@molecules/panel';
+export { default as Section } from '@molecules/section';
 export { default as Message } from '@molecules/message';
 export { default as Article } from '@molecules/article';
 export { default as Gallery } from '@molecules/gallery';
