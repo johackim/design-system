@@ -20,6 +20,7 @@ export { default as Banner } from '@atoms/banner';
 export { default as Select } from '@atoms/select';
 export { default as Switch } from '@atoms/switch';
 export { default as Button } from '@atoms/button';
+export { default as Divider } from '@atoms/divider';
 export { default as Loading } from '@atoms/loading';
 export { default as Heading } from '@atoms/heading';
 export { default as Dropdown } from '@atoms/dropdown';
