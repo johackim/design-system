@@ -5,9 +5,13 @@ export default {
     component: Article,
 };
 
-const Template = (args) => (
+const Template = ({ title, author, url, date, children }) => (
     <div className="max-w-screen-md border dark:border-gray-800 p-4">
-        <Article {...args} />
+        <Article>
+            <Article.Title>{title}</Article.Title>
+            <Article.Author author={author} date={date} url={url} />
+            <Article.Content>{children}</Article.Content>
+        </Article>
     </div>
 );
 
