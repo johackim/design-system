@@ -36,7 +36,7 @@
     @apply text-lg mt-4;
 }
 
-.article p {
+.article p:not(blockquote p) {
     @apply my-8 leading-relaxed;
 }
 
@@ -106,6 +106,22 @@
 
 .article blockquote {
     @apply border-l-4 border-gray-700 pl-4 my-6 text-lg mx-0;
+}
+
+.article blockquote p {
+    @apply mt-2 leading-relaxed;
+}
+
+.article blockquote > div {
+    @apply flex gap-2 items-center;
+}
+
+.article blockquote > div > div {
+    @apply capitalize;
+}
+
+.article blockquote svg {
+    @apply w-5 h-5;
 }
 
 .article em {
