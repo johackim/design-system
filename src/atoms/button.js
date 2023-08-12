@@ -3,7 +3,7 @@ import { cva } from 'class-variance-authority';
 import Loading from '@atoms/loading';
 
 const style = cva(
-    'inline-flex items-center px-5 py-2 rounded-md disabled:cursor-not-allowed disabled:opacity-75',
+    'inline-flex items-center justify-center px-5 py-2 rounded-md disabled:cursor-not-allowed disabled:opacity-75',
     {
         variants: {
             secondary: {
