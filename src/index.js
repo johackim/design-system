@@ -21,6 +21,7 @@ export { default as Select } from '@atoms/select';
 export { default as Switch } from '@atoms/switch';
 export { default as Button } from '@atoms/button';
 export { default as Divider } from '@atoms/divider';
+export { default as Tooltip } from '@atoms/tooltip';
 export { default as Loading } from '@atoms/loading';
 export { default as Heading } from '@atoms/heading';
 export { default as Dropdown } from '@atoms/dropdown';
