@@ -10,7 +10,7 @@
   ],
   "author": "johackim",
   "dependencies": {
-    "next": "^13.4.12"
+    "next": "~13.4.12"
   },
   "keywords": [
     "design-system",
